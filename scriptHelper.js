@@ -36,10 +36,16 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
         let fuelLevel = document.querySelector("input[name=fuelLevel]");
         let cargoMass = document.querySelector("input[name=cargoMass]");
         
-        if (pilotName.value === "" || copilotName.value === "") {
-           alert("All fields are required!");
+        
+        if (validateInput(pilotName) != "Not a Number" || validateInput(copilotName) != "Not a Number" ) {
+           alert("Invalid Pilot/Copilot Name!");
            // stop the form submission
            event.preventDefault();
+        }
+        if (validateInput(fuelLevel) != "Is a Number" || validateInput(cargoMass) != "Is a Number") {
+            alert("Invalid Fuel Lavel/Cargo Mass")
+            // stop the form submission
+            event.preventDefault();
         }
      });
    

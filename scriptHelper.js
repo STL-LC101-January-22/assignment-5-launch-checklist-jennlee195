@@ -9,7 +9,7 @@
 
 const fetch = require("node-fetch");
 
-function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
+function addDestinationInfo(document, name, diameter, star, distance, moons, image) {
    // Here is the HTML formatting for our mission target div.
    document.getElementById("missionTarget").innerHTML =
 
